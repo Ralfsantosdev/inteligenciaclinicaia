@@ -1,0 +1,27 @@
+# Exported from Render on 2025-06-25T17:51:44Z
+services:
+- type: web
+  name: ads_para_clinica
+  runtime: docker
+  repo: https://github.com/Ralfsantosdev/ads_para_clinica
+  plan: free
+  envVars:
+  - key: JWT_SECRET
+    sync: false
+  - key: SUPABASE_SERVICE_ROLE_KEY
+    sync: false
+  - key: SUPABASE_ANON_KEY
+    sync: false
+  - key: SUPABASE_URL
+    sync: false
+  - key: STRIPE_WEBHOOK_SECRET
+    sync: false
+  - key: STRIPE_SECRET_KEY
+    sync: false
+  - key: OPENAI_API_KEY
+    sync: false
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
+version: "1"
